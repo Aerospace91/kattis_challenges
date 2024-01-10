@@ -36,7 +36,8 @@ For each of the **n** shots, print the total number of targets the shot hits.
 # temp_check.py
 https://open.kattis.com/problems/cold?editresubmit=12631883
 
-Very simple challenge but I'm particularly proud of the my solution and feeling like I'm starting to grasp python 1 liners
+Very simple challenge but I'm particularly proud of the solution and feeling like I'm starting to grasp python 1 liners
+
 ---
 ## Input 
 1. The first line contains a single positive integer **n** that specifies the number of temperatures collected
