@@ -33,7 +33,7 @@ The next n lines each contain two integers **x** , **y** indicating the coordina
 ## Output
 For each of the **n** shots, print the total number of targets the shot hits.
 
-# temp_check.pu
+# temp_check.py
 https://open.kattis.com/problems/cold?editresubmit=12631883
 
 Very simple challenge but I'm particularly proud of the my solution and feeling like I'm starting to grasp python 1 liners
