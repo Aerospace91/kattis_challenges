@@ -1,3 +1,4 @@
+#Sample Input
 data = """3
 rectangle 1 1 10 5
 circle 5 0 8
@@ -8,6 +9,7 @@ rectangle -5 3 5 8
 10 10
 -10 -1
 4 -3"""
+#Input handling for original problem
 """
 contents = []
 while True:
@@ -19,6 +21,7 @@ while True:
 data = '\n'.join(contents)
 """
 
+#Classes handling target coord info based on Shape
 class Rectangle:
     def __init__(self, x1, y1, x2, y2):
         self.x1, self.y1 = int(x1), int(y1)
@@ -30,6 +33,7 @@ class Circle:
         self.y = int(y_coord)
         self.r = int(radius)
 
+#Functions to check if shot is inside target. Todo: refactor to use classes
 def is_inside_rectangle(rectangle, x, y):
     if rectangle.x1 <= x <= rectangle.x2 and rectangle.y1 <= y <= rectangle.y2:
         return True
@@ -40,11 +44,13 @@ def is_inside_circle(circle, x, y, r):
         return True
     return False
 
+#Splitting data into number of targets
 num_targets = 0
 data = data.split('\n')
 num_targets= int(data[0])
 list_of_targets = []
 
+#Creating a list of target objects from the given input
 for i in range(1, num_targets + 1):
     target_info = data[i].split(' ')
     if target_info[0] == 'rectangle':
@@ -53,16 +59,14 @@ for i in range(1, num_targets + 1):
         list_of_targets.append(Circle(target_info[1], target_info[2], target_info[3]))
         
 
-#print(is_inside_rectangle(list_of_targets[0], 10, 10))
-#print(is_inside_circle(list_of_targets[1], 10, 10, 10))
-
+#Splitting data into number of shots and shot info
 shots = data[num_targets + 1:]
 num_shots = int(shots[0])
 shots = shots[1:]
 shots = [shot.split(' ') for shot in shots]
 shots = [[int(shot[0]), int(shot[1])] for shot in shots]
-#print(shots)
 
+#Checking if shots are inside targets and printing the number of targets hit for each shot
 for i in range(num_shots):
     target_hit_count = 0
     for target in list_of_targets:
