@@ -1,6 +1,26 @@
 # kattis_challenges
 Collection of Kattis Challenges longer then a handful of lines
 
+# Handling Input
+---
+## Single Line
+```
+data = input()
+```
+
+## Multi-Line
+```
+contents = []
+while True:
+    try:
+        line = input()
+    except EOFError:
+        break
+    contents.append(line)
+data = '\n'.join(contents)
+```
+---
+
 # target_hit.py
 https://open.kattis.com/problems/hittingtargets
 ---
