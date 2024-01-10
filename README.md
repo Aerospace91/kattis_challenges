@@ -2,6 +2,7 @@
 Collection of Kattis Challenges longer then a handful of lines
 
 # target_hit.py
+https://open.kattis.com/problems/hittingtargets
 ---
 ## Input
 Input starts with an integer m indicating the number of targets.
